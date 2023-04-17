@@ -24,8 +24,14 @@ default: &default
 development:
   <<: *default
   database: reedbook_development
+<<<<<<< HEAD:config/database_.yml
   username: 
   password: 
+=======
+  username: fillson
+  password: 11111111
+
+>>>>>>> b90f9c5 (edit database and add in gitignore):config/database.yml
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -59,8 +65,14 @@ development:
 test:
   <<: *default
   database: reedbook_test
+<<<<<<< HEAD:config/database_.yml
   username: 
   password: 
+=======
+  username: fillson
+  password: 11111111
+
+>>>>>>> b90f9c5 (edit database and add in gitignore):config/database.yml
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -84,5 +96,10 @@ test:
 production:
   <<: *default
   database: reedbook_production
+<<<<<<< HEAD:config/database_.yml
   username: 
   password: 
+=======
+  username: fillson
+  password: 11111111
+>>>>>>> b90f9c5 (edit database and add in gitignore):config/database.yml
