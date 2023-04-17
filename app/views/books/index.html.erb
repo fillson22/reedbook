@@ -1,9 +1,0 @@
-<h1 class="text-center"> All books </h1>
-
-<hr>
- 
-    <% @books.each do |book| %> 
-        <%= render partial: "books/cardbook", locals: { book: book } %>
-    <% end %>
-
-<hr>
