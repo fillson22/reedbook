@@ -1,8 +1,16 @@
 <h1> All book </h1>
+
 <hr>
-<p> <%= @books %> </p>
+ 
+    <% @books.each do |book| %> 
+<p> <%= book.name %> | <%= book.description %> </p>
+    <% end %>
+
+<hr>
 
 
-<p></p>
-<hr>
+
+
+
+
 &copy; @filippov@ <%= Time.now.year %>
