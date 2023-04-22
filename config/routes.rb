@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   
-  root "books#index"
+  root "home#index"
 end
