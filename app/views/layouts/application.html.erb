@@ -12,23 +12,14 @@
 
   <body>
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div>
 
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <%= render 'layouts/navbar' %>
-        </div>
-      </header>
+        <div> <%= render 'layouts/navbar' %> </div>
 
-      <main role="main" class="inner cover">
-        <%= yield %>
-      </main>
+        <div> <%= yield %> </div>
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <%= render 'layouts/footer' %>
-        </div>
-      </footer>
+        <div class="footer"> <%= render 'layouts/footer' %> </div>
+
     </div>
 
   </body>
