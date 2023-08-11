@@ -3,26 +3,12 @@
     <a class="navbar-brand"> <%= link_to "BUKR", root_path, class: "btn" %> </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"> <%= link_to "Home", root_path, class: "btn", style: 'color:#FFFFFF' %> </li>
-        <li class="nav-item"> <%= link_to "Books", books_path, class: "btn", style: 'color:#FFFFFF' %> </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Послуги
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Репетитор</a></li>
-            <li><a class="dropdown-item" href="#">Курси</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Вебінари</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Підписка</a>
-        </li>
+        <li class="nav-item"> <%= link_to "Home", root_path, class: "btn btn-outline-light", style: 'color:#000000; margin-right:5px;' %> </li>
+        <li class="nav-item"> <%= link_to "Books", books_path, class: "btn btn-outline-light", style: 'color:#000000; margin-right:5px;' %> </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Пошук</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
     </div>
   </div>
