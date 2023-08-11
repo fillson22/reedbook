@@ -12,10 +12,23 @@
 
   <body>
 
+<<<<<<< HEAD
     <div class="container">
       <div class="row"> <%= render 'layouts/navbar' %></div>
       <div class="row"> <%= yield %> </div>
       <div class="row"> <%= render 'layouts/footer' %></div>
+=======
+    <div>
+
+        <div> <%= render 'layouts/navbar' %> </div>
+        
+        <p class="notice"><%= notice %></p> 
+        <p class="alert"><%= alert %></p> 
+        <div class="container-fluid"> <%= yield %> </div>
+
+        <div> <%= render 'layouts/footer' %> </div>
+
+>>>>>>> c9b8388 (Add gem devise and styling)
     </div>
 
   </body>

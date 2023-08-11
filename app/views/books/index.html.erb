@@ -1,6 +1,13 @@
 <h1> All book </h1>
 <hr>
+<<<<<<< HEAD
 <p> <%= @books %> </p>
+=======
+ 
+    <% @books.each do |book| %> 
+        <%= render partial: "books/cardbook", locals: { book: book } %>
+    <% end %>
+>>>>>>> c9b8388 (Add gem devise and styling)
 
 
 <p></p>

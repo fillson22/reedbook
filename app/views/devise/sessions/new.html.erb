@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row gy-5 justify-content-center">
   <div class="col-lg-4 col-md-6 text-center">
     <h1>Log in</h1>
@@ -8,6 +9,18 @@
       </div>
 
       <div class="form-group", style='margin:5px'>
+=======
+<div class="row">
+  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+    <h1 class="text-center">Log in</h1>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+>>>>>>> c9b8388 (Add gem devise and styling)
         <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
       </div>
 
