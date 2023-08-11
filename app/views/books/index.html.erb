@@ -3,7 +3,7 @@
 <hr>
  
     <% @books.each do |book| %> 
-<p> <%= book.name %> | <%= book.description %> </p>
+        <%= render partial: "books/cardbook", locals: { book: book } %>
     <% end %>
 
 <hr>
