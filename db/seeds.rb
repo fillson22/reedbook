@@ -1,1 +1,2 @@
 5.times { Book.create( name: Faker::Book.title, description: Faker::Book.genre ) }
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
