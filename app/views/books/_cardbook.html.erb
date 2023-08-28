@@ -1,8 +1,11 @@
-<div class="card" style="width: 18rem; margin:5px">
-  <img src="..." class="card-img-top" alt="...">
+<div class="card" style="width: 17rem; margin:5px">
+  <%= image_tag("book.jpg", alt: 'rss feed', style: 'margin-top:10px') %>
   <div class="card-body">
-    <h5 class="card-title"> <%= book.name %> </h5>
+    <h5 class="card-title text-center"> <%= book.name %> </h5>
     <p class="card-text"> <%= book.description %> </p>
-    <a> <%= link_to "Buy", class: "btn btn-primary"%> </a>
+  </div>
+  <div class="row">
+    <div class="col"> <%= link_to "Details", class:'btn btn-primary' %> </div>
+    <div class="col text-end"> <%= link_to "Buy", class:'btn btn-primary'%> </div>
   </div>
 </div>
