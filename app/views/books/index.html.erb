@@ -4,6 +4,9 @@
     <div class='row'>
         <div class='col-md-2 text-center'> 
             <h3 class="text-center"> Category </h3> 
+            <% Category.all.each do |category| %>
+                <p> <%= link_to category.name, category %> </p>
+            <%end%>
         </div>
         <div class='col-md-10'>
             <div class='row'>
