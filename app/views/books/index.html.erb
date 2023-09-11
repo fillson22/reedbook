@@ -8,12 +8,15 @@
                 <p> <%= link_to category.name, category %> </p>
             <%end%>
         </div>
-        <div class='col-md-10'>
-            <div class='row'>
-                <% @books.each do |book| %> 
-                    <%= render partial: "books/cardbook", locals: { book: book } %>
-                <% end %> 
-            </div>   
-        </div>
+        
+            <div class='col-md-10'>
+            <%= turbo_frame_tag "first_turbo_frame" do %>
+                <div class='row'>
+                    <% @books.each do |book| %> 
+                        <%= render partial: "books/cardbook", locals: { book: book } %>
+                    <% end %> 
+                </div>   
+            </div>
+        <% end %>
     </div>
 </div>
