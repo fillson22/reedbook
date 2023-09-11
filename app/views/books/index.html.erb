@@ -5,7 +5,7 @@
         <div class='col-md-2 text-center'> 
             <h3 class="text-center"> Category </h3> 
             <% Category.all.each do |category| %>
-                <p> <%= link_to category.name, category %> </p>
+                <p> <%= link_to category.name, category, data: { turbo_frame: "first_turbo_frame" } %> </p>
             <%end%>
         </div>
         
