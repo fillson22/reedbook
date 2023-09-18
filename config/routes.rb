@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   
   root "home#index"
   resources :categories
-  resources :books
+  resources :books do
+    resources :comments
+  end
 end
