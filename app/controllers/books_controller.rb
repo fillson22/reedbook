@@ -5,7 +5,9 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def show; end
+  def show
+    @comments = @book.comments
+  end
 
   private
 
