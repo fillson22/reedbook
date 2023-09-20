@@ -1,4 +1,4 @@
-    <div class='container my-5'>
+<div class='container my-5'>
         <div class='row'>
             <div class='col-md-8'> 
                 <h2> <%= @book.name %> </h2>
@@ -11,10 +11,21 @@
         <div class='row'>
             <p> <%= link_to '<-- Back', :back %> </p>
         </div>
-        <div class='row' style="background-color: #f0f2f5;">
-            <h3> Comments </h3> <hr>
+</div>             
+
+
+  <div class="container" style="background-color: #eee;">
+    <div class="row d-flex justify-content-start">
+        <hr> <h5> Comments </h5>
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <div class="card">
+          
+         <%= render partial: "comments/new_comment" %>
+          
+        </div>
+      </div>
+    </div>
             <% @comments.each do |comment|%>
                 <p> <%= render partial: "comments/comment", locals: { comment: comment}%> </p>
-            </div>
-        </div>
-    </div>
+            <%end%>
+  </div>
