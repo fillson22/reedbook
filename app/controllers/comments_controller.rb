@@ -2,11 +2,12 @@ class CommentsController < ApplicationController
 
   def create
     @book = Book.find_by id: params[:book_id]
-    @comment = @book.comments.new(comment_params)
+    @comment = @book.comments.build comment_params
     if @comment.save 
-        redirect_to book_path 
+        flash[:success] = 'Comment create!'
+        redirect_to book_path(@book) 
       else 
-        flash[:success] = 'Don`t create!'
+        render 'books/show'
       end
   end
 

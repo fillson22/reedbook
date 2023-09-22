@@ -6,7 +6,8 @@ class BooksController < ApplicationController
   end
 
   def show
-    @comments = @book.comments
+    @comments = @book.comments.order created_at: :desc
+    @comment = @book.comments.build
   end
 
   private

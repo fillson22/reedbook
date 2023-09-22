@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   
-  root "home#index"
   resources :categories
   resources :books do
     resources :comments
   end
+  
+  root "home#index"
 end
