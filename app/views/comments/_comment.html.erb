@@ -1,6 +1,9 @@
 <div class="col-md-12 col-lg-10 col-xl-8">
-<div class="card">
+<div class="card p-2">
         <h5> User.name </h5>
         <p> <%= comment.body %> </p>
+        <p class='text-end'> 
+                <%= link_to 'Delete', book_comment_path(@book, comment), 
+                data: { method: :delete, confirm: "Are you sure?" } %> </p>
 </div>
 </div>

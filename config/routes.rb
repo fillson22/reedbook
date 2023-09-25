@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   resources :categories
   resources :books do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
   
   root "home#index"

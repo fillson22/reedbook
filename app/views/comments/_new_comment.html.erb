@@ -5,8 +5,8 @@
                 height="40" />
               <div class="form-outline w-100">
                   <%= form_with model: [@book, @comment] do |form| %>
-                    <%= form.text_area :body, size: "30x5" %>
-                    <%= form.submit 'Post comment', class: "btn btn-primary btn-sm" %>
+                    <%= form.text_area :body, size: "50x5" %>
+                    <p> <%= form.submit 'Post comment', class: "btn btn-primary btn-sm" %> </p>
                   <% end %>
               </div>
             </div>
