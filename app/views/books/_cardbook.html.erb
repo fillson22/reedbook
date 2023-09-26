@@ -5,7 +5,7 @@
     <p class="card-text"> <%= book.description %> </p>
   </div>
   <div class="row">
-    <div class="col"> <%= link_to "Details", book %> </div>
+    <div class="col"> <%= link_to "Details", book, data: { turbo_frame: "second_turbo_frame" } %> </div>
     <div class="col text-end"> <%= link_to "Buy", class:'btn btn-primary'%> </div>
     <div class="col"> <%= link_to "Comments", book %> </div>
   </div>

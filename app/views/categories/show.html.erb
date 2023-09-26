@@ -1,7 +1,9 @@
-    <div class='container'>
-        <div class='row'>
-            <% @books.each do |book| %> 
-                <%= render partial: "books/cardbook", locals: { book: book } %>
-            <% end %> 
-        </div>
-    </div>  
+    <%= turbo_frame_tag "first_turbo_frame" do %>
+        <div class='container'>
+            <div class='row'>
+                <% @books.each do |book| %> 
+                    <%= render partial: "books/cardbook", locals: { book: book } %>
+                <% end %> 
+            </div>
+        </div>  
+    <% end %>
