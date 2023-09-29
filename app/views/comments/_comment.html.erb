@@ -5,7 +5,7 @@
         <p> <%= comment.body %> </p>
         
         <p> <%= link_to 'Delete', book_comment_path(@book, comment), 
-        data: { method: :delete, confirm: "Are you sure?" },
+        data: { turbo_method: :delete, confirm: "Are you sure?" },
         class: 'btn btn-danger btn-sm' %> </p>
 </div>
 </div>
