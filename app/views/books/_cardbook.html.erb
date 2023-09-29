@@ -1,12 +1,12 @@
-<div class="card" style="width: 17rem; margin:5px">
+<div class="card" style="width: 18rem; margin:5px">
   <%= image_tag("book.jpg", alt: 'rss feed', style: 'margin-top:10px') %>
   <div class="card-body">
     <h5 class="card-title text-center"> <%= book.name %> </h5>
     <p class="card-text"> <%= book.description %> </p>
   </div>
-  <div class="row">
-    <div class="col"> <%= link_to "Details", book, data: { turbo_frame: "second_turbo_frame" } %> </div>
-    <div class="col text-end"> <%= link_to "Buy", class:'btn btn-primary'%> </div>
-    <div class="col"> <%= link_to "Comments", book %> </div>
+  <div class="row text-center">
+    <div class="col"> <%= link_to "Details", book %> </div>
+    <div class="col"> <%= link_to "Buy", class:'btn btn-primary'%> </div>
+    <div class="col-5"> <small><%= link_to "Comments( #{book.comments.size} )", book %> </small> </div>
   </div>
 </div>

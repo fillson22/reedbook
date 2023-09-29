@@ -15,8 +15,6 @@ class CommentsController < ApplicationController
   def destroy
     if @comment.destroy
       redirect_to book_path(@book)
-    else
-      redirect_to book_path(@book)
     end
   end
 

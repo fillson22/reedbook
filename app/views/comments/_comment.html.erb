@@ -1,6 +1,6 @@
 <div class="col-md-12 col-lg-10 col-xl-8">
 <div class="card p-2">
-        <h5> User.name </h5>
+        <h5> <%= current_user.email %> </h5>
         <time> <%= comment.created_at.strftime("%d-%m-%Y %H:%M:%S") %> </time>
         <p> <%= comment.body %> </p>
         
