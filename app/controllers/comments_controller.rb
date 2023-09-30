@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @book.comments.build comment_params
     if @comment.save 
-        #redirect_to book_path(@book) 
+        redirect_to book_path(@book) 
       else 
         @comments = Comment.order created_at: :desc
         render 'books/show'
@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
   def destroy
     if @comment.destroy
-      #redirect_to book_path(@book)
+      redirect_to book_path(@book)
     end
   end
 

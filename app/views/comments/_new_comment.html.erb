@@ -4,6 +4,7 @@
                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar" width="40"
                 height="40" />
               <div class="form-outline w-100">
+                  <%= render 'shared/errors', object: @comment%>
                   <%= form_with model: [@book, @comment] do |form| %>
                     <%= form.text_area :body, size: "50x5" %>
                     <p> <%= form.submit 'Post comment', class: "btn btn-primary btn-sm" %> </p>
