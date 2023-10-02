@@ -4,7 +4,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @book.comments.build comment_params
-    if @comment.save 
+    @comment.user_id = current_user.id
+    if @comment.save
         redirect_to book_path(@book) 
       else 
         @comments = Comment.order created_at: :desc
