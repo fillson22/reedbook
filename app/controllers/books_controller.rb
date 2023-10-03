@@ -8,7 +8,6 @@ class BooksController < ApplicationController
   def show
     @comments = Comment.order created_at: :desc
     @comment = @book.comments.build
-    #@user = User.find_by id: 2
   end
 
   private

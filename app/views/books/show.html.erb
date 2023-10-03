@@ -24,8 +24,8 @@
         </div>
       </div>
     </div>
-            <% @comments.each do |comment|%>
-                <p> <%= render partial: "comments/comment", locals: { comment: comment}%> </p>
-            <%end%>
+            
+                <p> <%= render @comments %> </p>
+            
   </div>
 <% end %>

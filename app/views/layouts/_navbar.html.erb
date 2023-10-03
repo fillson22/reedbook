@@ -8,7 +8,7 @@
       </ul>
 
       <% if user_signed_in? %> 
-        <div style='margin-right:5px'> Welcome <%= current_user.email %> </div> 
+        <div style='margin-right:5px'> <%= current_user.view_email %> </div> 
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning", style: 'color:#000000; margin-right:5px;' %> 
       <% else %>
         <%= button_to "Sign in", new_user_session_path, class: "btn btn-warning", style: 'color:#000000; margin-right:5px;' %> 

@@ -3,8 +3,7 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:destroy]
 
   def create
-    @comment = @book.comments.build comment_params
-    @comment.user_id = current_user.id
+    @comment = @book.comments.build comment_create_params
     if @comment.save
         redirect_to book_path(@book) 
       else 
@@ -29,8 +28,8 @@ class CommentsController < ApplicationController
     @comment = @book.comments.find params[:id]
   end
 
-  def comment_params
-    params.require(:comment).permit(:body)
+  def comment_create_params
+    params.require(:comment).permit(:body).merge(user_id: current_user.id)
   end
     
 end

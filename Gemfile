@@ -58,6 +58,8 @@ gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'boots
 
 gem 'activeadmin'
 
+gem 'draper', '~> 4.0.0'
+
 group :assets do
   # Use Sass to process CSS
   gem "sass-rails" 
