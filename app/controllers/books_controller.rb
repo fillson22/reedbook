@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @comments = Comment.order created_at: :desc
+    @comments = @book.comments.order(created_at: :desc).decorate
     @comment = @book.comments.build
   end
 
