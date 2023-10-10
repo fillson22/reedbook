@@ -50,7 +50,7 @@ gem 'bootsnap', require: false
 gem 'faker'
 # It's a library for generating fake data such as names, addresses, and phone numbers...
 
-gem 'bootstrap', '~> 5.2.0'
+gem 'bootstrap', '~> 5.1.3'
 
 gem 'devise'
 
@@ -60,10 +60,7 @@ gem 'activeadmin'
 
 gem 'draper', '~> 4.0.0'
 
-group :assets do
-  # Use Sass to process CSS
-  gem 'sass-rails'
-end
+gem "sassc-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

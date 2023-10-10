@@ -6,14 +6,20 @@
         <li class="nav-item"> <%= link_to "Home", root_path, class: "btn btn-outline-light", style: 'color:#000000; margin-right:5px;' %> </li>
         <li class="nav-item"> <%= link_to "Books", books_path, class: "btn btn-outline-light", style: 'color:#000000; margin-right:5px;' %> </li>
       </ul>
-
-      <% if user_signed_in? %> 
-        <div style='margin-right:5px'> <%= current_user.view_email %> </div> 
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning", style: 'color:#000000; margin-right:5px;' %> 
-      <% else %>
-        <%= button_to "Sign in", new_user_session_path, class: "btn btn-warning", style: 'color:#000000; margin-right:5px;' %> 
-      <% end %>
-
+      <ul class='nav'>
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <%= link_to current_user.view_email, '#', class: "nav-link dropdown-toggle", data: { 'bs-toggle': 'dropdown'} %>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li> <%= link_to "Favorite book", '#', class: "dropdown-item" %> </li>
+              <li><hr class="dropdown-divider"></li>
+              <li> <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %> </li>
+            </ul>
+          </li>  
+        <% else %>
+            <%= link_to "Sign in", new_user_session_path, class: "btn btn-warning", style: 'color:#000000; margin-right:5px;' %>
+        <% end %>
+      </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
