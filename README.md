@@ -6,6 +6,6 @@
     bundle install
     rails db:create
     rails db:migrate
-    rails db:seed (create AdminUser and User, login and password in seeds.rb)
+    rails db:seed (created AdminUser and User, login and password in seeds.rb)
     rails s
 
