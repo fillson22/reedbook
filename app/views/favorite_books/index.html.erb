@@ -1,0 +1,8 @@
+<h1> My favorite books: </h1>
+<% if @favorite_books.any? %>
+  <% @favorite_books.each do |book| %>
+    <%= book.name %>
+  <% end %>
+<% else %>
+  <h3> You don`t have favorite books </h3>
+<% end %>
