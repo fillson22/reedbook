@@ -6,19 +6,19 @@ class FavoriteBooksController < ApplicationController
   end
 
   def create
-    @favorite_book = current_user&.favorite_books&.build(favo_create_params)
-    if @favorite_book&.save
-      render 'books/index'
+    book = Book.find(params[:book_id])
+    if current_user.favorite_books.exists?(book_id: book.id)
+      puts 'Book is alredy present'
     else
-      render 'home/index'
+      @favorite_book = current_user.favorite_books.build favo_create_params
+      @favorite_book.save
     end
-
   end
 
   private
 
   def favo_create_params
-    params.require(:favorite_book).permit(:book_id)
+    params.permit(:book_id)
   end
 
 end
