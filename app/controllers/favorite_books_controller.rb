@@ -8,7 +8,8 @@ class FavoriteBooksController < ApplicationController
   def create
     book = Book.find(params[:book_id])
     if current_user.favorite_books.exists?(book_id: book.id)
-      puts 'Book is alredy present'
+      flash[:alert] = 'Book is already present.'
+      redirect_to books_path
     else
       @favorite_book = current_user.favorite_books.build favo_create_params
       @favorite_book.save
