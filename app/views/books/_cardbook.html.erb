@@ -1,5 +1,9 @@
 <div class="card" style="width: 18rem; margin:5px">
-  <%= image_tag("book.jpg", alt: 'rss feed', style: 'margin-top:10px') %>
+  <% if book.image.attached? %>
+    <%= image_tag book.image, style: 'margin-top:10px' %>
+  <% else %>
+    <%= image_tag("book.jpg", alt: 'rss feed', style: 'margin-top:10px') %>
+  <% end %>
   <div class="card-body">
     <h5 class="card-title text-center"> <%= book.name %> </h5>
     <p class="card-text"> <%= book.description %> </p>
