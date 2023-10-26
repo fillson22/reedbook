@@ -3,10 +3,23 @@
         <div class='row'>
             <div class='col-md-8'> 
                 <h2> <%= @book.name %> </h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                <p> Минають роки, минають десятиліття, але ми знову й знову повертаємось до деяких 
+                літературних творів... Сьогодні, коли поширюється інтерес до нашої історії та культури, 
+                пропонуємо вам перечитати драму-феєрію відомої української письменниці й поетеси Лесі Українки. 
+                Цей твір розповідає про зв'язок людини і природи, про безсмертя вічних людських цінностей, 
+                добро і зло; про пошук гармонії, кохання і зраду; про матеріальне і духовне в житті. 
+                Це гімн справжньому коханню. Завдяки прекрасним ілюстраціям дивовижного краю з майбутнього 
+                анімаційного фільму «Мавка. Лісова пісня» пориньте у цей фантастичний світ і насолоджуйтеся 
+                колоритною мелодійною українською мовою. Сьогодні за допомогою сучасних технологій ми маємо 
+                можливість ще більше заглибитися у драму-феєрію. За допомогою QR-коду можна прослухати дивні 
+                народні волинські мелодії, що їх так цінувала поетеса.</p>
             </div>
             <div class='col-md-4'> 
+              <% if @book.image.attached? %>
+                <%= image_tag @book.image.variant(:thumb) %>
+              <% else %>
                 <%= image_tag("book.jpg", alt: 'rss feed') %>
+              <% end %>
             </div>
         </div>
         <div class='row'>

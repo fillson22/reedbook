@@ -1,24 +1,20 @@
-<div class='container my-5'>
-    <div class='row'> <h1 class="text-center"> All books </h1> 
+<div class='container'>
+  <div class='row align-middle mt-2'> <h3 class='text-center'> All books </h3> </div>
+  <div class='row'>
+    <div class='col-md-2 text-center'> 
+      <h3 class="text-center"> Category </h3> 
+      <% Category.all.each do |category| %>
+          <p> <%= link_to category.name, category, data: { turbo_frame: "first_turbo_frame" } %> </p>
+      <%end%>
     </div>
-    <div class='row'>
-        <div class='col-md-2 text-center'> 
-            <h3 class="text-center"> Category </h3> 
-            <% Category.all.each do |category| %>
-                <p> <%= link_to category.name, category, data: { turbo_frame: "first_turbo_frame" } %> </p>
-            <%end%>
-        </div>
-        
-        
-            <div class='col-md-10'>
-                <%= turbo_frame_tag "first_turbo_frame" do %>
-                    <div class='row'>
-                        <% @books.each do |book| %> 
-                            <%= render partial: "books/cardbook", locals: { book: book } %>
-                        <% end %> 
-                    </div> 
-                <% end %>     
-            </div> 
-                
-    </div>
+    <div class='col-md-10'>
+      <%= turbo_frame_tag "first_turbo_frame" do %>
+          <div class='row'>
+              <% @books.each do |book| %> 
+                  <%= render partial: "books/cardbook", locals: { book: book } %>
+              <% end %> 
+          </div> 
+      <% end %>     
+    </div> 
+  </div>
 </div>

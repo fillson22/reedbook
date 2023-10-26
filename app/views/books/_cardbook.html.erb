@@ -1,6 +1,6 @@
 <div class="card" style="width: 18rem; margin:5px">
   <% if book.image.attached? %>
-    <%= image_tag book.image, style: 'margin-top:10px' %>
+    <%= image_tag book.image.variant(:thumb), style: 'margin-top:10px' %>
   <% else %>
     <%= image_tag("book.jpg", alt: 'rss feed', style: 'margin-top:10px') %>
   <% end %>

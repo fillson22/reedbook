@@ -8,5 +8,8 @@ class Book < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
 
-  has_one_attached :image
+  has_one_attached :image do |attachable|
+    attachable.variant :thumb, resize: "250x250"
+    attachable.variant :small, resize: "100x100"
+  end
 end
