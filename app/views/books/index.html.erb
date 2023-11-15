@@ -1,5 +1,15 @@
 <div class='container'>
-  <div class='row align-middle mt-2'> <h3 class='text-center'> All books </h3> </div>
+  <div class='row align-middle mt-2'> 
+    <div class='col-8'>
+      <h3 class='text-center'> All books </h3> 
+    </div>
+    <div class='col-4'>
+      <%= search_form_for @q, class:'d-flex' do |f| %>
+          <%= f.search_field :name_cont, class: 'form-control me-2' %>
+          <%= f.submit 'Search', class: 'btn btn-outline-success' %>
+      <% end %>
+    </div>
+  </div>
   <div class='row'>
     <div class='col-md-2 text-center'> 
       <h3 class="text-center"> Category </h3> 

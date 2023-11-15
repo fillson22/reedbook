@@ -370,6 +370,7 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
+  ransack
   redis (~> 4.0)
   rubocop (~> 1.56)
   rubocop-capybara (~> 2.19)

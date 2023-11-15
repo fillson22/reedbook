@@ -24,6 +24,7 @@ gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'boots
 gem 'activeadmin', '~> 2.13.1'
 gem 'draper', '~> 4.0.0'
 gem "sassc-rails"
+gem 'ransack'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
