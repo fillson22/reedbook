@@ -4,14 +4,14 @@
                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar" width="40"
                 height="40" />
               <div class="form-outline w-100">
-                  <%= render 'shared/errors', object: @comment%>
-                  <%= form_with model: [@book, @comment] do |form| %>
-                    <%= form.text_area :body, size: "50x5", required: true %>
-                    <% if user_signed_in? %> 
+                <%= render 'shared/errors', object: @comment%>
+                  <% if user_signed_in? %> 
+                    <%= form_with model: [@book, @comment] do |form| %>
+                      <%= form.text_area :body, size: "50x5", required: true %>
                       <p> <%= form.submit 'Post comment', class: "btn btn-primary btn-sm" %> </p>
-                    <% else %>
-                      <p> <%= button_to "Sign in", '#', class: "btn btn-primary btn-sm", data: { turbo: false } %> </p>
                     <% end %>
+                  <% else %>
+                    <%= link_to "If you want to comment, Sign in", new_user_session_path, data: { turbo: false }, class: "btn btn-primary btn-sm" %> </p>  
                   <% end %>
               </div>
             </div>
