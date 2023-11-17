@@ -1,0 +1,3 @@
+<% @favo_books_global.each do |favorite_book| %>
+  <p> <%= favorite_book.user.view_email %> <%= favorite_book.book.name %> </p>
+<% end %>

@@ -5,6 +5,10 @@ class FavoriteBooksController < ApplicationController
     @favorite_books = current_user.favorite_books
   end
 
+  def top_rating
+    @favo_books_global = FavoriteBook.all.decorate
+  end
+
   def create
     book = Book.find(params[:book_id])
     if current_user.favorite_books.exists?(book_id: book.id)
