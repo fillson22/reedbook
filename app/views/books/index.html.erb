@@ -1,11 +1,10 @@
 <div class='container'>
   <div class='row align-middle mt-2'> 
-    <div class='col-8'>
-      <h3 class='text-center'> All books </h3> 
-    </div>
+  <h3 class='text-center'> All books </h3> 
+    <div class='col-8'> </div>
     <div class='col-4'>
       <%= search_form_for @q, class:'d-flex' do |f| %>
-          <%= f.search_field :name_cont, class: 'form-control me-2' %>
+          <%= f.search_field :name_cont, required: true, class: 'form-control me-2' %>
           <%= f.submit 'Search', class: 'btn btn-outline-success' %>
       <% end %>
     </div>
