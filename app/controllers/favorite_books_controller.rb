@@ -1,13 +1,11 @@
 class FavoriteBooksController < ApplicationController
-  before_action :authenticate_user!#, except: [:welcome, :about]
+  before_action :authenticate_user!, except: [:top_rating]
 
   def index
     @favorite_books = current_user.favorite_books
   end
 
-  def top_rating
-    @favo_books_global = FavoriteBook.all.decorate
-  end
+  def top_rating; end
 
   def create
     book = Book.find(params[:book_id])
@@ -17,6 +15,7 @@ class FavoriteBooksController < ApplicationController
     else
       @favorite_book = current_user.favorite_books.build favo_create_params
       @favorite_book.save
+      book.update(count: book.count += 1)
     end
   end
 

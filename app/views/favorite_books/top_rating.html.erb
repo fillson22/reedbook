@@ -1,7 +1,3 @@
-<% arr = Array.new(@favo_books_global.size) %>
-<% @favo_books_global.each do |favorite_book| %>
-  <% arr << favorite_book.book.id %>
-<% end %>
-<% arr.compact.uniq.each do |i| %>
-  <p> Book <%= Book.find(i).name %> likes: <%= arr.count(i) %> </p>
+<% Book.all.each do |book| %>
+  <p> <%= book.name %> - <%= book.count %> </p>
 <% end %>
