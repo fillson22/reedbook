@@ -4,7 +4,6 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show]
 
   def index
-    # @books = Book.all
     @q = Book.ransack(params[:q])
     @books = @q.result(distinct: true)
   end

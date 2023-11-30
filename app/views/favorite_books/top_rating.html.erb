@@ -1,3 +1,1 @@
-<% Book.all.each do |book| %>
-  <p> <%= book.name %> - <%= book.count %> </p>
-<% end %>
+<%= bar_chart Book.where.not(count: 0).group(:name).sum(:count), min: 0, max: 10, width: "600px", height: "200px" %>
