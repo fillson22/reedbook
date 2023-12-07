@@ -1,7 +1,7 @@
 <h1> My favorite books: </h1>
 <% if @favorite_books.any? %>
-  <% @favorite_books.each do |book| %>
-    <%= render partial: "books/cardbook_small", locals: { book: Book.find(book.book_id), size_image: :thumb } %>
+  <% @favorite_books.each do |favorite_book| %>
+    <%= render partial: "books/cardbook_small", locals: { book: Book.find(favorite_book.book_id), favorite_book: favorite_book, size_image: :thumb } %>
   <% end %>
 <% else %>
   <h3> You don`t have favorite books </h3>

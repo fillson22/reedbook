@@ -12,7 +12,7 @@
     <div class="col"> <%= link_to "Find book", class:'btn btn-primary'%> </div>
   </div>
   <div class="row text-center">
-    <div class="col"> <%= link_to "Add to Favorite", favorite_books_path(book_id: book.id), :method => :post, data: { turbo: false } %> </div>
+    <div class="col"> <%= link_to "Delete from Favorite", favorite_book_path(favorite_book), method: :delete %> </div>
     <div class="col-5"> <%= link_to "Comments( #{book.comments.size} )", book %></div>
   </div>
 </div>

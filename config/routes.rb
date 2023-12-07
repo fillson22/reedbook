@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :books do
     resources :comments, only: %i[create destroy]
   end
-  resources :favorite_books, only: %i[create index]
+  resources :favorite_books
   get '/top_rating', to: 'favorite_books#top_rating'
 
   root 'home#index'
